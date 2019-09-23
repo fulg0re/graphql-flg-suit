@@ -29,31 +29,14 @@ touch index.js
 const DB_NAME = 'dbName';
 ```
 
-* Create in your project root folder `gql` dir and 2 files:
+# Usage...
 
 ```
-mkdir gql
-cd gql
-touch resolvers.js
-touch typeDefs.js
-```
+const { startSuitServer } = require('./graphql-flg-suit');
 
-* Add next lines in to this files:
+// typeDefs = [typeDef]
+// resolvers = [resolver]
+startSuitServer(typeDefs, resolvers);
 
-```
-// "resolvers.js" example
-const UserResolvers = require('../src/user/gql/resolvers');
 
-module.exports = [
-  ...UserResolvers,
-];
-```
-
-```
-// "typeDefs.js" example
-const UserSchema = require('../src/user/gql/schema');
-
-module.exports = [
-  ...UserSchema,
-];
 ```
